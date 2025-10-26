@@ -20,10 +20,8 @@ A comprehensive implementation of Named Entity Recognition (NER) for Arabic text
   - [Training](#training)
   - [Inference](#inference)
 - [Results](#-results)
-- [Project Structure](#-project-structure)
 - [Entity Types](#-entity-types)
 - [Requirements](#-requirements)
-- [Contributing](#-contributing)
 - [License](#-license)
 - [Citation](#-citation)
 
@@ -119,8 +117,8 @@ This project implements a state-of-the-art Arabic NER system using **AraBERT** (
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/arabic-ner.git
-cd arabic-ner
+git clone https://github.com/omarsabri125/Arabic-NER-Token-Classification.git
+cd Arabic-NER-Token-Classification
 ```
 
 2. **Create virtual environment**
@@ -259,14 +257,14 @@ for word, tag in result:
 
 | Metric | Score |
 |--------|-------|
-| **Precision** | 83.03% |
-| **Recall** | 81.37% |
-| **F1 Score** | 82.19% |
-| **Accuracy** | 95.40% |
+| **Precision** | 85.03% |
+| **Recall** | 83% |
+| **F1 Score** | 84% |
+| **Accuracy** | 95.76% |
 
 ### Training History
 
-- **Total Epochs**: 7 (stopped early)
+- **Total Epochs**: 8 (stopped early)
 - **Best Epoch**: Epoch 5
 - **Training Time**: ~1.5 hours on Tesla T4 GPU
 - **Final Training Loss**: 0.0288
@@ -281,37 +279,6 @@ for word, tag in result:
 | GPE (Geo-Political) | 79.2% | 77.4% | 78.3% |
 | TIMEX (Time) | 90.1% | 88.9% | 89.5% |
 
----
-
-## 📁 Project Structure
-
-```
-arabic-ner/
-│
-├── train.py                    # Main training script
-├── inference.py                # Inference utilities
-├── requirements.txt            # Python dependencies
-├── README.md                   # This file
-│
-├── notebooks/
-│   └── arabic_ner_complete.ipynb   # Full documentation notebook
-│
-├── saved_model/               # Trained model directory
-│   ├── config.json
-│   ├── model.safetensors
-│   ├── tokenizer_config.json
-│   └── vocab.txt
-│
-├── results/                   # Training outputs
-│   ├── checkpoint-best/
-│   └── training_logs/
-│
-├── data/                      # Dataset cache (auto-generated)
-│
-└── logs/                      # Training logs
-```
-
----
 
 ## 🏷️ Entity Types
 
@@ -357,30 +324,6 @@ matplotlib>=3.7.0
 seaborn>=0.12.0
 scikit-learn>=1.3.0
 ```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push to the branch** (`git push origin feature/AmazingFeature`)
-5. **Open a Pull Request**
-
-### Areas for Contribution
-
-- [ ] Add support for more Arabic NER datasets
-- [ ] Implement attention visualization
-- [ ] Create web demo with Gradio/Streamlit
-- [ ] Add model quantization for deployment
-- [ ] Improve documentation with more examples
-- [ ] Add unit tests
-
----
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -424,6 +367,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ Star this repo if you find it helpful!**
 
-Made with ❤️ for the Arabic NLP community
 
 </div>
